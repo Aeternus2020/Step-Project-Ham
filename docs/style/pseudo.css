@@ -1,0 +1,103 @@
+.menu a:hover {
+  color: var(--green-color);
+  border-bottom: 2px solid var(--green-color);
+  transition: 1s;
+}
+
+.tabs-title:hover {
+  border: 1px solid var(--green-color);
+  transition: 1s;
+}
+
+.news_tabs a:hover > .shape {
+  background-color: var(--green-color);
+  transition: 1s;
+}
+
+.news_tabs a:hover > h5,
+.news_tabs a:hover > p {
+  color: var(--green-color);
+  transition: 1s;
+}
+
+#left:hover,
+#right:hover {
+  background-color: var(--green-color);
+  border: 1px solid var(--green-color);
+  color: var(--white-color);
+  transition: 1s;
+}
+
+.purchase_button:hover,
+#explore:hover {
+  box-shadow: 0 0 0 0 var(--white-color);
+  transform: translateY(-5px);
+  font-size: 1.1rem;
+  transition: 1s;
+}
+
+button:hover {
+  font-size: 1.1rem;
+  transition: 1s;
+}
+
+.oneTwo:hover > #hover {
+  z-index: 1;
+  bottom: 206px;
+  transition: 2s;
+}
+
+.servise_main::before,
+.work_main::before,
+.news_main::before,
+.commas::before,
+.gallery::before {
+  content: " ";
+  margin-bottom: 47px;
+  position: relative;
+  top: -20px;
+  left: 7%;
+  display: block;
+  height: 1px;
+  width: 75px;
+  border-top: 1px solid var(--green-color);
+}
+
+.commas::before {
+  left: 0%;
+}
+
+.tabs-title::after {
+  content: "";
+  position: relative;
+  top: 7px;
+  left: 35%;
+  width: 15px;
+  height: 15px;
+  display: none;
+  transform: rotate(45deg);
+  background-color: var(--green-color);
+}
+
+.tabs-title[data-status="active"]::after,
+.work_list[data-status="active"]::after {
+  display: block;
+}
+
+.block_title::after {
+  content: " ";
+  position: relative;
+  left: 7%;
+  display: block;
+  height: 25px;
+  width: 75px;
+  border-bottom: 1px solid var(--green-color);
+}
+
+.testimonials .block_title::after {
+  left: 37%;
+}
+
+.gallery::before {
+  left: 48%;
+}

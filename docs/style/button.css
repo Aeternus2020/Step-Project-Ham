@@ -1,0 +1,55 @@
+button {
+  border: none;
+  border-radius: 5px;
+  color: var(--white-color);
+  position: relative;
+  margin: 13px;
+  top: 110px;
+  width: 169px;
+  height: 68px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.purchase_content button {
+  position: relative;
+  top: 62px;
+}
+
+#explore,
+.purchase .purchase_button {
+  background-color: var(--green-color);
+  box-shadow: 0 -5px 0 0 var(--white-color);
+  font-size: 15px;
+}
+
+.purchase_button {
+  background-color: #00cbf6;
+  box-shadow: 0 -5px 0 0 var(--white-color);
+  font-size: 15px;
+}
+
+#left,
+#right {
+  width: 31px;
+  height: 31px;
+  cursor: pointer;
+  border: 1px solid var(--white-color);
+  color: #bbbbbb;
+}
+
+#left svg,
+#right svg {
+  padding: 8px 11px;
+  fill: currentColor;
+}
+
+#more,
+#moreWork {
+  display: block;
+  background-color: var(--green-color);
+  top: 0;
+  left: 45%;
+  padding-bottom: 10px;
+  margin-bottom: 100px;
+}

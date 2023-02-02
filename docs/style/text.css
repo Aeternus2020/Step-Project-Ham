@@ -1,0 +1,135 @@
+footer p {
+  position: absolute;
+  top: 45%;
+  left: 40%;
+}
+
+.logo h1 {
+  font-size: 50px;
+  padding: 5px 11px;
+}
+
+.logo span {
+  color: var(--green-color);
+  font-size: 32px;
+}
+
+.about p {
+  color: #d4d4d4;
+  font-size: 34px;
+}
+
+.about h1,
+.about h3,
+h3 {
+  text-transform: uppercase;
+}
+
+.about h3,
+.about span {
+  font-size: 35px;
+}
+
+.about h1 {
+  font-size: 78px;
+}
+
+.about span,
+footer span {
+  color: var(--green-color);
+}
+
+.options h3 {
+  font-size: 20px;
+  position: relative;
+}
+
+.tabs-main p {
+  line-height: 24px;
+  color: #777777;
+  display: flex;
+  align-items: center;
+  margin: 0 10px;
+  font-size: 14px;
+}
+
+.news_tabs h5 {
+  font-size: 18px;
+  padding: 5px 20px;
+  color: #717171;
+}
+
+.news_tabs p {
+  color: #777777;
+  font-size: 13px;
+  padding: 5px 20px;
+}
+
+.purchase_content p {
+  padding: 12px;
+}
+
+.purchase_content h3 {
+  font-size: 40px;
+  color: var(--green-color);
+}
+
+.shape p {
+  font-size: 16px;
+  color: var(--white-color);
+  padding: 6px 14px;
+  text-align: center;
+  line-height: 25px;
+}
+
+.testimonials p {
+  color: #bbbbbb;
+  font-size: 16px;
+  text-align: center;
+  padding: 37px 0;
+  line-height: 30px;
+}
+
+.list_commentators  p {
+  display: none;
+}
+
+.major .text {
+  margin: 38px 0;
+}
+
+.avatar p {
+  display: flex;
+  font-size: 13px;
+  padding: 0;
+}
+
+.avatar h3 {
+  display: flex;
+  font-size: 16px;
+}
+
+#more span, 
+#moreWork span {
+  margin-right: 15px;
+  position: relative;
+  top: 5%;
+  font-size: 30px;
+}
+
+#h {
+  margin: 5px;
+  width: 58px;
+  height: 67px;
+  background-image: url("../Pictures/Polygon\ 1\ 1.svg");
+}
+
+#two h3,
+#four h3 {
+  top: 162px;
+}
+
+#one h3,
+#three h3 {
+  top: 150px;
+}
