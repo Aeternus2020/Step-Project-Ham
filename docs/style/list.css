@@ -1,0 +1,15 @@
+ul {
+  list-style: none;
+}
+
+.menu ul {
+  display: flex;
+  gap: 21px;
+  height: 120px;
+  align-items: center;
+}
+
+.menu li {
+  display: inline;
+  text-transform: uppercase;
+}
