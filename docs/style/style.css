@@ -3,6 +3,12 @@
 @import url(./pseudo.css);
 @import url(./text.css);
 @import url(./grid.css);
+@import url(./reset.css);
+@font-face {
+  font-family: "Montserrat";
+  src: local("Montserrat"), url(../fonts/Montserrat/Montserrat-Regular.ttf);
+  font-display: swap;
+}
 
 :root {
   --white-color: #fff;
@@ -12,9 +18,10 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: Montserrat, sans-serif;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 16px;
+  line-height: 1;
 }
 
 footer {
@@ -35,27 +42,26 @@ a {
   align-items: center;
   flex-direction: column;
   background-color: var(--white-color);
-  width: 100%;
   height: 100%;
   margin: auto auto;
   max-width: 1900px;
 }
 
-.navbar {
+nav {
   background: rgba(94, 93, 88, 0.6);
   width: 100%;
   height: 120px;
 }
 
 .navbar_content {
-  max-width: 1160px;
   color: #fff;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
   position: relative;
-  left: 20%;
+  margin: auto;
+  gap: 25px
 }
 
 .logo {
@@ -99,16 +105,18 @@ a {
 .purchase_wrapper {
   background-image: url("../Pictures/background/section-2.webp");
   height: 477px;
-  width: 100%;
 }
 
 .testimonials_wrapper {
   background-image: url("../Pictures/background/section-3.webp");
-  width: 100%;
   height: 854px;
   position: static;
   margin-top: 40px;
   overflow: hidden;
+}
+
+section {
+  width: 100%;
 }
 
 .about {
@@ -116,12 +124,13 @@ a {
   position: relative;
   top: 30%;
   text-align: center;
-  max-width: 1160px;
+  max-width: 1200px;
 }
 
 .options {
   display: flex;
   max-width: 100%;
+  justify-content: center;
 }
 
 .options div {
@@ -135,26 +144,23 @@ a {
   top: 100px;
 }
 
-.servise_wrapper,
-.news_wrapper,
-.work_wrapper {
-  width: 100%;
-}
-
 .servise,
 .news {
   background: var(--white-color);
   margin: auto auto;
-  max-width: 1160px;
+  max-width: 1200px;
+  text-align: center;
 }
 
 .work_wrapper {
   background: #e9edef;
+  text-align: center;
 }
 
 .servise_main,
 .work_main,
-.news_main {
+.news_main,
+.gallery-main {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -165,7 +171,7 @@ a {
 .work_main,
 .testimonials p {
   margin: auto auto;
-  max-width: 1160px;
+  max-width: 1200px;
 }
 
 .work {
@@ -218,12 +224,11 @@ a {
   height: 86px;
 }
 
-.block_title {
+h2 {
   position: relative;
   font-size: 36px;
   color: #4e4e4e;
-  margin: 80px 0 24px 0;
-  left: 45%;
+  margin: 50px;
 }
 
 .news_tabs {
@@ -322,7 +327,7 @@ a {
   display: flex;
   position: absolute;
   margin: auto auto;
-  max-width: 1160px;
+  max-width: 1200px;
   list-style: none;
   flex-direction: column;
   justify-content: center;
@@ -352,17 +357,15 @@ a {
   display: flex;
   flex-direction: column;
   background-color: #18cfaa23;
-  width: 100%;
   position: static;
   overflow: hidden;
-}
-
-.gallery_wrapper .block_title {
-  left: 40%;
+  align-items: center;
 }
 
 .gallery {
   margin: auto;
+  max-width: 1200px;
+  text-align: center;
 }
 
 .oneTwo {

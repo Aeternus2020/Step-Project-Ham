@@ -22,21 +22,21 @@ let ava;
 
 //Создание списков комментаторов
 const arr = [`<p class="text">The most impressive was their devotion to making sure our needs were met. They very carefully recognized our needs and understood the way our company and customer service function. It was a great decision to start working with them!</p>
-            <h3 class="name">Ada Lovelace</h3>
+            <h3 class="name">Marissa Ann Mayer</h3>
             <p class="profession">UX Designer</p>
-            <img src="./Pictures/testimonials/1.png" alt="Ada Lovelace"/>`,
+            <img src="./Pictures/testimonials/1.png" alt="Marissa Ann Mayer"/>`,
             `<p class="text">They delivered quality work thanks to their aim of turning in the best possible results. The team is committed to first-class outcomes. It’s been a pleasure working with them, and we look forward to continuing this partnership further.</p>
-            <h3 class="name">Larry Page</h3>
+            <h3 class="name">Pichai Sundararajan</h3>
             <p class="profession">UX Designer</p>
-            <img src="./Pictures/testimonials/4.svg" alt="Larry Page"/>`, 
+            <img src="./Pictures/testimonials/4.png" alt="Pichai Sundararajan"/>`, 
             `<p class="text">They quite had a human approach and were open to adaptation towards our needs. Their passion, professionalism, transparency, and love of detail were astonishing. We look forward to working with them again to add new features down the road.</p>
-            <h3 class="name">Hasan Ali</h3>
+            <h3 class="name">Jeffrey Preston Bezos</h3>
             <p class="profession">UX Designer</p>
-            <img src="./Pictures/testimonials/2.svg" alt="Hasan Ali"/>`, 
+            <img src="./Pictures/testimonials/2.png" alt="Jeffrey Preston Bezos"/>`, 
             `<p class="text">They always try to find a solution, and they work above and beyond to keep the customer happy. On an organizational level and an employee-specific level, their responsiveness is unmatched within their industry. They are the number one place to go if you want things done fast but correctly and with intense communication.</p>
-            <h3 class="name">Grace Hopper</h3>
+            <h3 class="name">Arianna Huffington</h3>
             <p class="profession">Talent Researcher</p>
-            <img src="./Pictures/testimonials/3.svg" alt="Grace Hopper"/>`];
+            <img src="./Pictures/testimonials/3.png" alt="Talent Researcher"/>`];
   const ul = document.createElement("ul");
   ul.className = "list_commentators";
 
@@ -142,27 +142,21 @@ function rightScroll() {
 
 //Переключение вкладки по клику
 work.addEventListener('click', (event) => {
-  let targ1 = event.target;
-  toggle(targ1, worklist, worktabs);
-  if (morework.style.display === 'none') {
-    morework.style.display = 'block';
-  }
+  toggle(event.target, worklist, worktabs);
+  morework.style.display === 'none' ? morework.style.display = 'block' : null
 });
 
 tabs.addEventListener("click", (event) => {
-  let targ = event.target;
-  toggle(targ, tabttl, tabmain);
+  toggle(event.target, tabttl, tabmain);
 });
 
 function toggle(target, buttonList, list) {
-  for (let i = 0; i < buttonList.length; i++) {
-    if (buttonList[i].dataset.status === "active") {
-      buttonList[i].dataset.status = "inactive";
-    }
-    target.dataset.status = "active";
-    list[i].dataset.status = buttonList[i].dataset.status;
-  }
+  buttonList.forEach((button, index) => {
+    button.dataset.status = (button === target) ? "active" : "inactive";
+    list[index].dataset.status = button.dataset.status;
+  });
 }
+
 
 let arrClone = [];
 

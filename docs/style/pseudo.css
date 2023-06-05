@@ -51,12 +51,11 @@ button:hover {
 .work_main::before,
 .news_main::before,
 .commas::before,
-.gallery::before {
+.gallery-main::before {
   content: " ";
-  margin-bottom: 47px;
   position: relative;
-  top: -20px;
-  left: 7%;
+  top: -45px;
+  left: 5%;
   display: block;
   height: 1px;
   width: 75px;
@@ -77,27 +76,25 @@ button:hover {
   display: none;
   transform: rotate(45deg);
   background-color: var(--green-color);
+  transition: 2s;
 }
 
 .tabs-title[data-status="active"]::after,
 .work_list[data-status="active"]::after {
   display: block;
+  transition: 1s;
 }
 
 .block_title::after {
   content: " ";
   position: relative;
-  left: 7%;
+  left: 50%;
   display: block;
-  height: 25px;
+  height: 10px;
   width: 75px;
   border-bottom: 1px solid var(--green-color);
 }
 
 .testimonials .block_title::after {
   left: 37%;
-}
-
-.gallery::before {
-  left: 48%;
 }
