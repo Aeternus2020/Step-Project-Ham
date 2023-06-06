@@ -155,6 +155,9 @@ section {
 .work_wrapper {
   background: #e9edef;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .servise_main,
@@ -250,6 +253,7 @@ h2 {
 .work_tabs img {
   width: 284px;
   height: 206px;
+  display: none;
 }
 
 .purchase {
