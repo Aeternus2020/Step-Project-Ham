@@ -1,18 +1,8 @@
 "use strict";
 
-const tabttl = document.querySelectorAll(".tabs-title");
-const tabmain = document.querySelectorAll(".tabs-main");
-const tabs = document.querySelector(".tabs");
 const worklist = document.querySelectorAll(".work_list");
-const worktabs = document.querySelectorAll(".work_tabs");
 const work = document.querySelector(".work");
-const left = document.getElementById('left');
-const right = document.getElementById('right');
-const commt = document.querySelector('.list_commet');
-const tabscont = document.querySelector('.tabs-contents');
 const major = document.querySelector('.major');
-const hover = document.getElementById('hover');
-const imgsWork = document.querySelectorAll('.work_tabs img');
 const allWork = document.querySelector('.all');
 const workWrapper = document.querySelector('.work_wrapper');
 let second;
@@ -24,7 +14,7 @@ const buttonAdd = document.createElement("button");
       workWrapper.appendChild(buttonAdd);
 const morework = document.getElementById('moreWork');
 
-//Создание списков комментаторов
+//Creating lists of commentators
 const arr = [`<p class="text">The most impressive was their devotion to making sure our needs were met. They very carefully recognized our needs and understood the way our company and customer service function. It was a great decision to start working with them!</p>
             <h3 class="name">Marissa Ann Mayer</h3>
             <p class="profession">UX Designer</p>
@@ -58,22 +48,22 @@ function creat() {
   liM.className = "avatar";
   major.append(liM);
   ava = document.querySelector('.avatar')
-  commt.append(ul);
+  document.querySelector('.list_commet').append(ul);
 }
 
 creat(arr);
 
-//Скроллинг комментаторов влево
-right.addEventListener('click', () => {
+//Scrolling comments to the left
+document.getElementById('right').addEventListener('click', () => {
   scroll(rightScroll, "-30px")
 })  
 
-//Скроллинг комментаторов вправо
-left.addEventListener('click', () => {
+//Scrolling commentators to the right
+document.getElementById('left').addEventListener('click', () => {
   scroll(leftScroll, "30px")
 })  
 
-//Скроллинг комментаторов 
+//Scrolling commentators
 function scroll(side, y) {
   second = document.querySelector('.second');
   second.animate([
@@ -88,7 +78,7 @@ function scroll(side, y) {
     setTimeout(animRev, 800);
 }
 
-//Анимация аватара
+//Avatar animation
 function animRev() {
     ava.animate([
       {transform: 'translate(0, 0)', opacity: 1},
@@ -100,7 +90,7 @@ function animRev() {
       ], 1000)
 }
 
-//Анимация скролла
+//Scroll Animation
 function scrollUl(y) {
   ul.animate([
     {transform: `translate(${y}, 0)`, opacity: 0},
@@ -112,7 +102,7 @@ function scrollUl(y) {
   ], 1000);
 }
 
-//Анимация скролла влево
+//Scroll left animation
 function rightScroll() {
   let elm = arr.shift(0);
   arr.push(elm);
@@ -123,7 +113,7 @@ function rightScroll() {
   scrollUl("30px");
 }
 
-//Анимация скролла вправо
+//Scroll right animation
 function leftScroll() {
   let elm = arr.pop(3);
   arr.unshift(elm);
@@ -134,9 +124,10 @@ function leftScroll() {
   scrollUl("-30px");
 }
 
-//Переключение вкладки по клику
+//Tab switching on click
 function toggle(target, buttonList, list) {
   buttonList.forEach((button, index) => {
+    console.log(target);
     button.dataset.status = (button === target) ? "active" : "inactive";
     list[index].dataset.status = button.dataset.status;
   });
@@ -151,20 +142,20 @@ work.addEventListener('click', (event) => {
       img.style.display = "block";
     }
   })
-  toggle(event.target, worklist, worktabs);
+  toggle(event.target, worklist, document.querySelectorAll(".work_tabs"));
 });
 
-tabs.addEventListener("click", (event) => {
-  toggle(event.target, tabttl, tabmain);
+document.querySelector(".tabs").addEventListener("click", (event) => {
+  toggle(event.target, document.querySelectorAll(".tabs-title"), document.querySelectorAll(".tabs-main"));
 });
 
 const arrClone = [];
 
-//Добавление картинок
+//Adding pictures in a block "Our Amazing Work"
 function showAllImg(length) {
   while (allWork.children.length < length) {
     let rand = Math.floor(Math.random() * 94);
-    let selectedImg = imgsWork[rand];
+    let selectedImg = document.querySelectorAll('.work_tabs img')[rand];
     
     if (!arrClone.includes(selectedImg)) {
       let clone = selectedImg.cloneNode();

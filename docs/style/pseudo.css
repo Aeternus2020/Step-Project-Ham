@@ -44,14 +44,13 @@ button:hover {
 .oneTwo:hover > #hover {
   z-index: 1;
   bottom: 206px;
-  transition: 2s;
+  transition: 1s;
 }
 
 .servise_main::before,
 .work_main::before,
 .news_main::before,
-.commas::before,
-.gallery-main::before {
+.commas::before {
   content: " ";
   position: relative;
   top: -45px;
@@ -66,23 +65,8 @@ button:hover {
   left: 0%;
 }
 
-.tabs-title::after {
-  content: "";
-  position: relative;
-  top: 7px;
-  left: 35%;
-  width: 15px;
-  height: 15px;
-  display: none;
-  transform: rotate(45deg);
-  background-color: var(--green-color);
-  transition: 2s;
-}
-
-.tabs-title[data-status="active"]::after,
 .work_list[data-status="active"]::after {
   display: block;
-  transition: 1s;
 }
 
 .block_title::after {

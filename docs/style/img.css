@@ -1,0 +1,43 @@
+.tabs-main img {
+    width: 117px;
+    height: 86px;
+    padding: 5px;
+}
+
+.news_tabs img {
+    width: 263px;
+    height: 208px;
+}
+
+.work_tabs img {
+    width: 284px;
+    height: 206px;
+    display: none;
+}
+
+.commentator img {
+    width: 59px;
+    height: 59px;
+    background-color: #1fdab554;
+    padding: 5px;
+    border-radius: 50%;
+    margin: 25px;
+}
+
+.images img {
+    height: 100%;
+}
+
+    .avatar img {
+    background-color: #1fdab554;
+    border-radius: 50%;
+    width: 170px;
+    height: 100%;
+    margin: 33px 0;
+    padding: 10px;
+    }
+
+    .imgs {
+    height: 206px;
+    overflow: hidden;
+    }

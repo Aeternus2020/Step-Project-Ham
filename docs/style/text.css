@@ -1,12 +1,7 @@
-footer p {
-  position: absolute;
-  top: 45%;
-  left: 40%;
-}
 
 .logo h1 {
   font-size: 50px;
-  padding: 5px 11px;
+  padding: 10px;
 }
 
 .logo span {
@@ -95,7 +90,7 @@ footer span {
 }
 
 .major .text {
-  margin: 38px 0;
+  margin: 40px 10px;
 }
 
 .avatar p {
@@ -119,9 +114,9 @@ footer span {
 
 #h {
   margin: 5px;
-  width: 58px;
-  height: 67px;
-  background-image: url("../Pictures/Polygon\ 1\ 1.svg");
+  width: 60px;
+  height: 70px;
+  background-image: url("../Pictures/icons/Polygon 1 1.svg");
 }
 
 #two h3,
